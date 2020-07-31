@@ -13,7 +13,7 @@ script:
 after_success:
     - docker build -t ghislop4/multi-client ./client
     - docker build -t ghislop4/multi-nginx ./nginx
-    - docker build -t ghislop4/multi-server ./server
+    - docker build -t ghislop4/multi-server ./Server
     - docker build -t ghislop4/multi-worker ./worker
     # log in to cocker CLI
     - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
