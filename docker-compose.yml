@@ -24,7 +24,7 @@ services:
             context: ./Server
         volumes: 
             - /app/node_modules
-            - ./server:/app
+            - ./Server:/app
         environment: 
             - REDIS_HOST=redis
             - REDIS_PORT=6379
