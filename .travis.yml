@@ -11,10 +11,10 @@ script:
     - docker run -e CI=true ghislop/react-test npm test
 
 after_success:
-    - docker build -t ghislop/multi-client ./client
-    - docker build -t ghislop/multi-nginx ./nginx
-    - docker build -t ghislop/multi-server ./server
-    - docker build -t ghislop/multi-worker ./worker
+    - docker build -t ghislop4/multi-client ./client
+    - docker build -t ghislop4/multi-nginx ./nginx
+    - docker build -t ghislop4/multi-server ./server
+    - docker build -t ghislop4/multi-worker ./worker
     # log in to cocker CLI
     - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
     # take those images and push to docker hub

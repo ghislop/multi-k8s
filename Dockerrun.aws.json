@@ -1,0 +1,35 @@
+{
+    "AWSEBDockerrunVersion": 2,
+    "containerDefinitions": [
+        {
+            "name": "client",
+            "image": "ghislop4/multi-client",
+            "hotname": "client",
+            "essential": false
+        },
+        {
+            "name": "server",
+            "image": "ghislop4/multi-server",
+            "hotname": "api",
+            "essential": false
+        },
+        {
+            "name": "worker",
+            "image": "ghislop4/multi-worker",
+            "hotname": "worker",
+            "essential": false
+        },
+        {
+            "name": "nginx",
+            "image": "ghislop4/multi-nginx",
+            "essential": true,
+            "portMappings": [
+                {
+                    "hostPort": 80,
+                    "containerPort": 80
+                }
+            ],
+            "links": ["client","server"]
+        }
+    ]
+}
