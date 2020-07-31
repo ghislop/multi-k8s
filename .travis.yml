@@ -18,7 +18,7 @@ after_success:
     # log in to cocker CLI
     - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
     # take those images and push to docker hub
-    - docker push multi-client
-    - docker push multi-nginx
-    - docker push multi-server
-    - docker push multi-worker
+    - docker push ghislop4/multi-client
+    - docker push ghislop4/multi-nginx
+    - docker push ghislop4/multi-server
+    - docker push ghislop4/multi-worker
