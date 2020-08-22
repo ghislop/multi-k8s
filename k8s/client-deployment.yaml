@@ -14,6 +14,6 @@ spec:
         spec:
             containers:
               - name: client
-                image: ghislop4/multi-client
+                image: ghislop4/complex-client
                 ports:
                   - containerPort: 3000
