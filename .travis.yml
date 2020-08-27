@@ -15,10 +15,10 @@ before_install:
     - gcloud config set compute/zone us-west1-b
     - gcloud container clusters get-credentials multi-cluster
     - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
-    - docker build -t ghislop/react-test -f ./client/dockerfile.dev ./client
+    - docker build -t ghislop4/react-test -f ./client/dockerfile.dev ./client
 
 script:
-    - docker run -e CI=true ghislop/docker-react npm test
+    - docker run -e CI=true ghislop4/docker-react npm test
 
 deploy:
     provider: script
