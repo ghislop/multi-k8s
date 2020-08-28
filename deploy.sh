@@ -9,5 +9,5 @@ docker push ghislop4/multi-worker:latest
 docker push ghislop4/multi-worker:$SHA
 kubectl apply -f k8s
 kubectl set image deployments/server-deployment server=ghislop4/multi-server:$SHA
-kubectl set image deployments/client-deployment client=ghislop4/multi-slient:$SHA
+kubectl set image deployments/client-deployment client=ghislop4/multi-client:$SHA
 kubectl set image deployments/worker-deployment worker=ghislop4/multi-worker:$SHA
